@@ -1,0 +1,5 @@
+DROP TABLE IF EXISTS sala;
+CREATE TABLE IF NOT EXISTS `sala` ( `sala_id` INT AUTO_INCREMENT PRIMARY KEY, `nombre` VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci, `capacidad_maxima` INT NOT NULL, `tipo_sala` ENUM('2D', '3D', 'IMAX'), `descripcion` VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+INSERT INTO `sala` (`nombre`, `capacidad_maxima`, `tipo_sala`, `descripcion`) VALUES ('Sala Experimental', 100, '2D', NULL), (NULL, 150, '3D', 'Sala con efectos especiales avanzados'), ('Sala Sin Nombre', NULL, 'IMAX', 'Sala en preparación con capacidad por definir'), ('Sala Básica', 80, NULL, 'Sala económica para funciones estándar'), ('Sala Principal', 200, 'IMAX', 'Sala principal con tecnología de última generación'), ('Sala 3D Deluxe', 150, '3D', 'Sala con proyección 3D y sonido envolvente'), ('Sala Clásica', 120, '2D', 'Sala estándar con ambiente acogedor'), ('Sala Premium', 80, '3D', 'Sala exclusiva con asientos reclinables');
+
