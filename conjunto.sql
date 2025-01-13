@@ -19,9 +19,6 @@ VALUES
 
 
 
-
-
-
 -- Tabla: Alejandro Juarez --
 DROP TABLE IF EXISTS sala;
 CREATE TABLE IF NOT EXISTS `sala` ( `sala_id` INT AUTO_INCREMENT PRIMARY KEY, `nombre` VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci, `capacidad_maxima` INT NOT NULL, `tipo_sala` ENUM('2D', '3D', 'IMAX'), `descripcion` VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -68,14 +65,6 @@ PRIMARY KEY (boleto_id))
 ENGINE=MyISAM CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 INSERT INTO boleto (sala, cliente, numero_asiento, precio)  VALUES  (1, 'Maria Lopez', 10, 180.00), (2, 'Carlos Sanchez', 5, 250.75), (3, 'Ana Gomez', 20, 300.00);
-
-
-
-
-
-
-
-
 
 
 
