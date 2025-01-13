@@ -19,6 +19,18 @@ SELECT * FROM sala WHERE capacidad_maxima > 100 EXCEPT SELECT * FROM sala WHERE 
 -- Agregación --
 SELECT COUNT(*) AS total_salas, AVG(capacidad_maxima) AS capacidad_promedio FROM sala;
 
+-- Reunion natural --
+SELECT * FROM sala NATURAL JOIN funcion;
+
+-- Reunion natural por la izquierda --
+SELECT * FROM sala LEFT JOIN funcion ON sala.sala_id = funcion.sala_id;
+
+-- Reunion natural por la derecha --
+SELECT * FROM sala RIGHT JOIN funcion ON sala.sala_id = funcion.sala_id;
+
+-- Producto cartesiano --
+SELECT * FROM sala CROSS JOIN funcion;
+
 END //
 
 DELIMITER ;
